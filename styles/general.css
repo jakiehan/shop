@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  max-width: 1448px;
+  font-family: 'Roboto', 'Arial', 'sans-serif';
+  font-weight: 400;
+  line-height: 0;
+  background-color: #fff;
+  padding: 16px 0;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 0 24px;
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form {
+  position: relative;
+  height: 40px;
+}
+
+.input {
+  border: none;
+  outline: none;
+  padding: 12px 0 12px 32px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #323232;
+  width: 200px;
+}
+
+.input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 50px #fff;
+  -webkit-text-fill-color: #323232;
+}
+
+.input::placeholder {
+  color: #323232;
+}
+
+.input:focus {
+  border-bottom: 2px solid #e97f03;
+}
+
+.input:focus + .search-icon {
+  fill: #e97f03;
+}
+
+.search-icon {
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  position: absolute;
+  top: 6px;
+  left: 0;
+}
+
+.links-wrapper {
+  display: flex;
+  gap: 16px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.btn {
+  width: 24px;
+  height: 24px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+  background-position: 50%;
+}
+
+.link-go-cart {
+  background-image: url(../assets/images/btn-cart.svg);
+}
+
+.link-go-profile {
+  background-image: url(../assets/images/btn-profile.svg);
+}
+
+.like {
+  width: 24px;
+  height: 24px;
+  align-self: end;
+  cursor: pointer;
+  filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.25));
+}
+
+.transparency:hover {
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+
+@media screen and (min-width: 562px) {
+  .input {
+    width: 300px;
+  }
+}
