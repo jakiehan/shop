@@ -29,21 +29,21 @@
 }
 
 .product-title {
-  font-weight: 700;
+  font-weight: var(--f-weight-la);
   font-size: 24px;
   line-height: 28px;
   margin: 0;
 }
 
 .product-description {
-  font-weight: 400;
+  font-weight: var(--f-weight-sm);
   font-size: 14px;
   line-height: 16px;
   margin: 0;
 }
 
 .product-subtitle {
-  font-weight: 700;
+  font-weight: var(--f-weight-la);
   font-size: 18px;
   line-height: 21px;
   margin: 0;
@@ -67,8 +67,8 @@
 
 .price {
   margin: 0;
-  color: #e97f03;
-  font-weight: 400;
+  color: var(--c-orange);
+  font-weight: var(--f-weight-sm);
   font-size: 36px;
   line-height: 42px;
 }
@@ -83,13 +83,13 @@
 .counter-wrapper {
   display: flex;
   align-items: center;
-  border: 1px solid #323232;
+  border: 1px solid var(--c-dark-grey);
 }
 
 .counter-btn {
-  color: #e97f03;
+  color: var(--c-orange);
   margin: 0 8px;
-  font-weight: 400;
+  font-weight: var(--f-weight-sm);
   font-size: 24px;
   line-height: 24px;
 }
@@ -98,12 +98,12 @@
   padding: 0;
   width: 60px;
   height: 38px;
-  font-weight: 400;
+  font-weight: var(--f-weight-sm);
   font-size: 24px;
   line-height: 28px;
   border: none;
-  border-left: 1px solid #323232;
-  border-right: 1px solid #323232;
+  border-left: 1px solid var(--c-dark-grey);
+  border-right: 1px solid var(--c-dark-grey);
   text-align: center;
 }
 
@@ -111,11 +111,11 @@
   width: 160px;
   height: 40px;
   border-radius: 10px;
-  background-color: #e97f03;
-  font-weight: 400;
+  background-color: var(--c-orange);
+  font-weight: var(--f-weight-sm);
   font-size: 24px;
   line-height: 28px;
-  color: #fff;
+  color: var(--c-white);
 }
 
 @media screen and (max-width: 356px) {
@@ -158,7 +158,7 @@
     width: 300px;
     height: 300px;
     background: none;
-    border: 1px solid #f2f2f2;
+    border: 1px solid var(--c-light-grey);
   }
 
   .actions-wrapper {
