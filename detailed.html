@@ -6,22 +6,127 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
-  <title>About the product</title>
+  <title>Shop: about the product</title>
   <link
     rel="stylesheet"
     href="vendor/normalize.css"
   >
   <link
     rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+  >
+  <link
+    rel="stylesheet"
+    href="styles/general.css"
+  >
+  <link
+    rel="stylesheet"
     href="styles/detailed.css"
   >
 </head>
-<body>
-  <header>
-
+<body class="app">
+  <header class="header">
+    <form class="form">
+      <input
+        class="input"
+        type="search"
+        name="search input"
+        placeholder="Search products"
+      >
+      <svg class="search-icon">
+        <path
+          d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5Zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14Z"
+        />
+      </svg>
+    </form>
+    <div class="links-wrapper">
+      <a
+        class="link link-icon link-go-cart transparency"
+        href="#"
+      >
+      </a>
+      <a
+        class="link link-icon link-go-profile transparency"
+        href="#"
+      >
+      </a>
+    </div>
   </header>
-  <main>
-
+  <main class="container">
+    <img
+      class="img"
+      src="./assets/images/image-product.png"
+      alt="product image"
+    >
+    <div class="product-info">
+      <div class="product-about">
+        <h2 class="product-title">
+          G Home
+        </h2>
+        <p class="product-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices ante sit amet mollis luctus.
+          Morbi semper, tellus in finibus tristique, purus odio sodales sem, vitae dignissim enim metus vel purus.
+          Quisque a rutrum leo. Phasellus quis ex sed magna finibus convallis varius luctus justo.
+          Nullam et sapien vel magna ultrices pulvinar. Nunc felis ante, lobortis eget imperdiet in, iaculis at justo.
+          Etiam libero nisl, hendrerit vitae ultricies vitae, pharetra a est. Vivamus vestibulum quam sit amet facilisis
+          consequat.
+          Curabitur sollicitudin arcu arcu, pretium aliquam nibh hendrerit a. Donec diam massa, tempus sed pulvinar a,
+          fermentum et orci.
+        </p>
+        <h3 class="product-subtitle">
+          Details
+        </h3>
+        <p class="product-description">
+          Nulla et mauris sed elit semper pretium a quis augue. Fusce tempus est ex, eu porttitor nulla auctor et.
+          Maecenas eget quam non risus porta elementum. Pellentesque posuere augue in malesuada fermentum.
+          Maecenas vitae viverra mauris. Suspendisse a cursus libero. Pellentesque vitae purus eget lectus lobortis
+          laoreet sed sollicitudin diam.
+          Pellentesque pellentesque eu justo at ullamcorper. Quisque quis egestas magna. Vestibulum et felis id nisi
+          dapibus viverra vel vitae nisl. Morbi lobortis nunc turpis, sed tincidunt quam cursus nec. Morbi eget lorem
+          dolor.
+        </p>
+      </div>
+      <div class="actions-wrapper">
+        <div class="priced-wrapper">
+          <p class="price">$129</p>
+          <div class="counter-wrapper">
+            <button
+              class="btn counter-btn transparency"
+              aria-label="button decrement"
+              type="button"
+            >
+              —
+            </button>
+            <input
+              class="counter-input"
+              type="text"
+              value="1"
+            >
+            <button
+              class="btn counter-btn transparency"
+              aria-label="button increment"
+              type="button"
+            >
+              +
+            </button>
+          </div>
+        </div>
+        <div class="btn-wrapper">
+          <img
+            class="like like-pos-center transparency"
+            src="./assets/images/like-card.svg"
+            alt="like"
+          >
+          <button
+            class="btn btn-add transparency"
+            aria-label="button add"
+            type="button"
+          >
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </div>
   </main>
 </body>
 </html>
