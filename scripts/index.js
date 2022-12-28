@@ -23,8 +23,9 @@ api.getProducts()
   function generateCard(data) {
     const card = new Card(data, {
       handleCardClick: (id) => {
-        sessionStorage.setItem('cardId', id);
-        window.location.pathname = 'detailed.html';
+        const url = new URL(`${window.location.href}detailed.html`);
+        url.searchParams.set('id', id);
+        window.location.assign(url);
       },
     });
     const cardElement = card.createCard();
