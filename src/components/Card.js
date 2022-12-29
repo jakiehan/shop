@@ -1,4 +1,6 @@
 import { BASE_URL, cardSelectors } from "../utils/constants.js";
+import like from '../assets/images/like-card.svg';
+import likeActive from '../assets/images/like-card-active.svg';
 
 export default class Card {
   constructor(card, { handleCardClick }) {
@@ -30,7 +32,7 @@ export default class Card {
     this._cardTitle.textContent = this._name;
     this._cardTitle.title = this._name;
     this._cardPrice.textContent = `$ ${this._price}`;
-    this._cardLike.src = !this._like ? './assets/images/like-card.svg' : './assets/images/like-card-active.svg';
+    this._cardLike.src = !this._like ? like : likeActive;
 
     this._setEventListeners();
 

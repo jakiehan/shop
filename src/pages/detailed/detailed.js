@@ -1,7 +1,7 @@
-import Api from "./Api.js";
-import ProductInfo from "./ProductInfo.js";
-import Form from "./Form.js";
-import { BASE_URL, detailedSelectors } from "../utils/constants.js";
+import './detailed.css';
+import Api from "../../components/Api.js";
+import ProductInfo from "../../components/ProductInfo.js";
+import { BASE_URL, detailedSelectors } from "../../utils/constants.js";
 
 const api = new Api(BASE_URL);
 const productInfo = new ProductInfo(detailedSelectors);
