@@ -1,3 +1,6 @@
+@import url(../vendor/normalize.css);
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap);
+
 :root {
   --f-weight-sm: 400;
   --f-weight-la: 700;

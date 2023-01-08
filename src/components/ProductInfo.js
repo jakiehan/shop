@@ -1,4 +1,6 @@
-import { BASE_URL } from "../utils/constants.js";
+import { BASE_URL } from '../utils/constants.js';
+import likeInactive from '../assets/images/like-card.svg';
+import likeActive from '../assets/images/like-card-active.svg';
 
 export default class ProductInfo {
   constructor({ img, title, description, subtitle, subtitleDescription, price, like }) {
@@ -22,6 +24,6 @@ export default class ProductInfo {
     this._description.textContent = info;
     this._subtitle.textContent = description;
     this._subtitleDescription.textContent = details;
-    this._like.src = !like ? './assets/images/like-card.svg' : './assets/images/like-card-active.svg';
+    this._like.src = !like ? likeInactive : likeActive;
   }
 }

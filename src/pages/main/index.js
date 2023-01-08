@@ -1,8 +1,10 @@
-import Api from './Api.js';
-import Card from './Card.js';
-import CardList from './CardList.js';
-import Form from './Form.js';
-import { BASE_URL } from '../utils/constants.js';
+import './index.css';
+import Api from '../../components/Api.js';
+import Card from '../../components/Card.js';
+import CardList from '../../components/CardList.js';
+import Form from '../../components/Form.js';
+import { BASE_URL } from '../../utils/constants.js';
+import { debounce } from '../../utils/debounce.js';
 
 const api = new Api(BASE_URL);
 
@@ -12,13 +14,11 @@ api.getProducts()
   })
   .catch(err => console.log(err));
 
-
   const showProducts = new CardList({
     renderer: (item) => {
       showProducts.addItem(generateCard(item));
     }
   }, '.products-list');
-
 
   function generateCard(data) {
     const card = new Card(data, {
@@ -33,9 +33,9 @@ api.getProducts()
   }
 
   const form = new Form({
-    handleChange: (e) => {
+    handleChange: debounce((e) => {
       showProducts.filterItems(e.target.value);
-    }
+    },500)
   })
 
   form.setEventListeners();
