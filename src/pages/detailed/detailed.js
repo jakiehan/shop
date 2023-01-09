@@ -1,16 +1,18 @@
 import './detailed.css';
-import Api from "../../components/Api.js";
 import ProductInfo from "../../components/ProductInfo.js";
-import { BASE_URL, detailedSelectors } from "../../utils/constants.js";
+import { detailedSelectors } from "../../utils/constants.js";
+import { client } from '../../api/axiosConfig.js';
 
-const api = new Api(BASE_URL);
 const productInfo = new ProductInfo(detailedSelectors);
 
 const paramsFromUrl = new URLSearchParams(window.location.search);
 const cardId = paramsFromUrl.get('id');
 
-api.getProduct(cardId)
-  .then(data => {
+(async function loadProductInfo() {
+  try {
+    const { data } = await client.get(`item/${cardId}`);
     productInfo.setInfo(data.content);
-  })
-  .catch(err => console.log(err))
+  } catch (error) {
+    console.log(error);
+  }
+}());
