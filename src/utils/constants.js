@@ -19,6 +19,7 @@ export const cardSelectors = {
 
 export const popupSelectors = {
   popup: '.popup',
+  popupContainer: '.app',
   message: '.popup-message',
   opened: 'popup-opened',
   close: 'popup-close'

@@ -1,7 +1,7 @@
 import './detailed.css';
-import ProductInfo from "../../components/ProductInfo.js";
-import { detailedSelectors } from "../../utils/constants.js";
-import { client } from '../../api/axiosConfig.js';
+import ProductInfo from '@components/ProductInfo';
+import { detailedSelectors } from '@utils/constants.js';
+import { client } from '@client/axiosConfig.js';
 
 const productInfo = new ProductInfo(detailedSelectors);
 
@@ -12,7 +12,5 @@ const cardId = paramsFromUrl.get('id');
   try {
     const { data } = await client.get(`item/${cardId}`);
     productInfo.setInfo(data.content);
-  } catch (error) {
-    console.log(error);
-  }
+  } catch { }
 }());

@@ -1,17 +1,15 @@
 import './index.css';
-import Card from '../../components/Card.js';
-import CardList from '../../components/CardList.js';
-import Form from '../../components/Form.js';
-import { debounce } from '../../utils/debounce.js';
-import { client } from '../../api/axiosConfig.js';
+import Card from '@components/Card';
+import CardList from '@components/CardList';
+import Form from '@components/Form';
+import { debounce } from '@utils/debounce.js';
+import { client } from '@client/axiosConfig.js';
 
 (async function loadProducts() {
   try {
     const { data } = await client.get('item');
     showProducts.renderItems(data.content);
-  } catch (error) {
-    console.log(error);
-  }
+  } catch { }
 }());
 
 const showProducts = new CardList({
@@ -28,8 +26,7 @@ function generateCard(data) {
       window.location.assign(url);
     },
   });
-  const cardElement = card.createCard();
-  return cardElement;
+  return card.createCard();
 }
 
 const form = new Form({
