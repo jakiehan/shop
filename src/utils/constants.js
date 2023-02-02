@@ -16,3 +16,11 @@ export const cardSelectors = {
   price: '.card-price',
   like: '.like',
 }
+
+export const popupSelectors = {
+  popup: '.popup',
+  popupContainer: '.app',
+  message: '.popup-message',
+  opened: 'popup-opened',
+  close: 'popup-close'
+}

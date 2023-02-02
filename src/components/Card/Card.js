@@ -1,6 +1,6 @@
-import { BASE_URL, cardSelectors } from "../utils/constants.js";
-import like from '../assets/images/like-card.svg';
-import likeActive from '../assets/images/like-card-active.svg';
+import { BASE_URL, cardSelectors } from '@utils/constants.js';
+import like from '@images/like-card.svg';
+import likeActive from '@images/like-card-active.svg';
 
 export default class Card {
   constructor(card, { handleCardClick }) {
